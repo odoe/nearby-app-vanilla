@@ -1,7 +1,5 @@
 import "@esri/calcite-components/dist/components/calcite-list";
 import "@esri/calcite-components/dist/components/calcite-list-item";
-import "@esri/calcite-components/dist/components/calcite-button";
-import "@esri/calcite-components/dist/components/calcite-icon";
 
 import "./nearby-card";
 import NearbyCard from "./nearby-card";

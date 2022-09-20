@@ -1,11 +1,10 @@
-import { defineCustomElements } from "@esri/calcite-components/dist/custom-elements";
-
+import "@esri/calcite-components/dist/components/calcite-loader";
+import "@esri/calcite-components/dist/calcite/calcite.css";
+import "@arcgis/core/assets/esri/themes/light/main.css";
 import "./components/nearby-content";
 
 import config from "@arcgis/core/config";
 import Locate from "@arcgis/core/widgets/Locate";
-import "@arcgis/core/assets/esri/themes/light/main.css";
-import "@esri/calcite-components/dist/calcite/calcite.css";
 import "./styles.css";
 
 import { locate } from "./data/locate";
@@ -19,8 +18,6 @@ import Point from "@arcgis/core/geometry/Point";
 
 config.apiKey = import.meta.env.VITE_API_KEY;
 
-defineCustomElements();
-
 const defaultCategories: string[] = ["Coffee Shop"];
 
 interface State {
@@ -32,6 +29,7 @@ const stateObj: State = {
 };
 
 const nav = document.getElementById("nav");
+const loader = document.querySelector("calcite-loader");
 let mapElem: NearbyMap;
 
 const store = createStore({
@@ -71,7 +69,7 @@ async function initialize() {
     ),
     distance: distance(new Point(store.currentLocation), a.location),
   }));
-
+  loader?.parentElement?.removeChild(loader);
   contentElem.items = results;
 
   // event listeners
