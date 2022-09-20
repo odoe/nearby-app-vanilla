@@ -1,0 +1,51 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 5px;
+    background: var(--calcite-ui-brand);
+    color: var(--calcite-ui-foreground-1);
+    padding: 1rem;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: max-content;
+}
+
+#nav > svg {
+    stroke: #eee;
+    cursor: pointer;
+}
+
+.parent {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+  
+    /* Just for parent demo size */
+    height: 100vh;
+}
+
+.locate-container {
+    display: none;
+}
+
+nearby-map {
+    height: 100%;
+    width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}

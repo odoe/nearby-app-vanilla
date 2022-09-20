@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nearby WC</title>
+  <script type="module" src="/src/app.ts"></script>
+</head>
+
+<body>
+  <div class="parent">
+    <header class="header">
+      <nav id="nav" class="hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 32 32">
+          <script xmlns="" />
+          <path d="M14 5.25L3.25 16 14 26.75V20h14v-8H14zM27 13v6H13v5.336L4.664 16 13 7.664V13z" />
+          <path fill="none" d="M0 0h32v32H0z" />
+        </svg>
+      </nav>
+      <label>Nearby JavaScript</label>
+      <div class="locate-container"></div>
+    </header>
+    <main class="main">
+      <nearby-content></nearby-content>
+    </main>
+  </div>
+</body>
+
+</html>
